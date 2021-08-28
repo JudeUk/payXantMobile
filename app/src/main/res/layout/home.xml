@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2">
+
+    <TextView
+        android:id="@+id/goodDayTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22dp"
+        android:layout_marginTop="@dimen/margin_46dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Good day,"
+        android:textColor="@color/black2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recentActivityTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Recent activity"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/menuTextView3"
+        app:layout_constraintStart_toEndOf="@+id/menuTextView3"
+        app:layout_constraintTop_toTopOf="@+id/menuTextView3" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_22dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Shin Ryujin"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goodDayTextview" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/width_38dp"
+        android:layout_height="@dimen/height_38dp"
+        android:layout_marginTop="@dimen/margin_46dp"
+        android:layout_marginEnd="@dimen/margin_22dp"
+        android:background="@drawable/user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/width_20dp"
+        android:layout_height="@dimen/height_20dp"
+        android:layout_marginEnd="@dimen/margin_14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/notification_alert" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardBalance"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_18dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@drawable/rectangle_card_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView">
+
+        <TextView
+            android:id="@+id/yourBalanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_22dp"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Your balance"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/menuTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_14dp"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:layout_marginEnd="@dimen/margin_22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/yourBalanceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/currencySymbolTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_22dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="$"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourBalanceTextView" />
+
+        <TextView
+            android:id="@+id/amountTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="68,00"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            app:layout_constraintStart_toEndOf="@+id/currencySymbolTextview"
+            app:layout_constraintTop_toBottomOf="@+id/yourBalanceTextView" />
+
+        <TextView
+            android:id="@+id/currencyTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="USD"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/amountTextview"
+            app:layout_constraintTop_toBottomOf="@+id/yourBalanceTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/availabilityImageView"
+            android:layout_width="@dimen/width_80dp"
+            android:layout_height="@dimen/height_32dp"
+            android:layout_marginStart="@dimen/margin_22dp"
+            android:layout_marginBottom="@dimen/margin_22dp"
+            android:background="@drawable/rectangle_available"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/availabilityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Available"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/availabilityImageView"
+            app:layout_constraintEnd_toEndOf="@+id/availabilityImageView"
+            app:layout_constraintStart_toStartOf="@+id/availabilityImageView"
+            app:layout_constraintTop_toTopOf="@+id/availabilityImageView" />
+
+        <TextView
+            android:id="@+id/accountNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_22dp"
+            android:layout_marginBottom="@dimen/margin_22dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="••••••0979"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/menuTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_14dp"
+        android:layout_marginTop="@dimen/margin_22dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardBalance"
+        app:srcCompat="@drawable/menu_icon_grey" />
+
+    <ImageView
+        android:id="@+id/menuTextView3"
+        android:layout_width="2dp"
+        android:layout_height="@dimen/height_14dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_22dp"
+        app:layout_constraintStart_toStartOf="@+id/cardBalance"
+        app:layout_constraintTop_toBottomOf="@id/cardBalance"
+        app:srcCompat="@color/blueberry" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewAllTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recentActivityTextview">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/padding_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp">
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/home_item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/include2"
+                    layout="@layout/home_item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/include"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <include
+                    android:id="@+id/include3"
+                    layout="@layout/home_item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/include2"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <include
+                    android:id="@+id/include4"
+                    layout="@layout/home_item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/include3"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <include
+                    android:id="@+id/include5"
+                    layout="@layout/home_item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/include4"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <include
+                    android:id="@+id/include6"
+                    layout="@layout/home_item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/include5"
+                    tools:layout_editor_absoluteX="0dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/viewAllTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/button_fill_cyanblue"
+        android:fontFamily="@font/poppins_medium"
+        android:text="View all"
+        android:textAllCaps="false"
+        android:textColor="@color/blueberry"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sentTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/button_fill_cyanblue"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/padding_8dp"
+        android:paddingStart="@dimen/padding_16dp"
+        android:paddingEnd="@dimen/padding_16dp"
+        android:text="Sent"
+        android:textAllCaps="false"
+        android:textColor="@color/blueberry"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toEndOf="@+id/viewAllTextview" />
+
+    <Button
+        android:id="@+id/receivedTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/button_fill_cyanblue"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="@dimen/padding_8dp"
+        android:paddingStart="@dimen/padding_16dp"
+        android:paddingEnd="@dimen/padding_16dp"
+        android:text="Received"
+        android:textAllCaps="false"
+        android:textColor="@color/blueberry"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toEndOf="@+id/sentTextview" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_16dp"
+            android:paddingBottom="@dimen/padding_16dp">
+
+            <ImageView
+                android:id="@+id/homeView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:srcCompat="@drawable/home_blue_icon" />
+
+            <ImageView
+                android:id="@+id/sendView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/send_image" />
+
+            <ImageView
+                android:id="@+id/loansView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/loans_icon" />
+
+            <ImageView
+                android:id="@+id/airtimeView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/airtime_blue_icon" />
+
+            <ImageView
+                android:id="@+id/transactionView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/transactions_blue_icon" />
+
+            <ImageView
+                android:id="@+id/settingsView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/settings_blue_icon" />
+        </LinearLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

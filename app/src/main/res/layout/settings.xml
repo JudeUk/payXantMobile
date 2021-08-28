@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2">
+
+    <TextView
+        android:id="@+id/settingsBackButton"
+        android:layout_width="@dimen/width_20dp"
+        android:layout_height="@dimen/height_20dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_64dp"
+        android:background="@drawable/back_stroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_64dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Logout"
+        android:textColor="@color/persian_red"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:background="@drawable/user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/settingsBackButton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_18dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Shin Ryujin"
+        android:textColor="@color/black2"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/user_email"
+        android:textColor="@color/blueberry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_16dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:background="@color/grey2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_16dp"
+        android:background="@color/grey2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalInformationConstraintLayout" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_16dp"
+        android:background="@color/grey2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankAccountAndCreditCardConstraintLayout" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_16dp"
+        android:background="@color/grey2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_16dp"
+        android:background="@color/grey2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/personalInformationConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <TextView
+            android:id="@+id/personalInformationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Personal Information"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/personalInformationImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/personalInformationImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bankAccountAndCreditCardConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <TextView
+            android:id="@+id/bankAccountAndCreditCardTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Bank account and credit card"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bankAccountAndCreditCardImageView"
+            app:layout_constraintStart_toEndOf="@+id/bankAccountAndCreditCardImageView"
+            app:layout_constraintTop_toTopOf="@+id/bankAccountAndCreditCardImageView" />
+
+        <TextView
+            android:id="@+id/paymentPrefencesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Payment prefences"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/paymentPrefencesImageView"
+            app:layout_constraintStart_toEndOf="@+id/bankAccountAndCreditCardImageView"
+            app:layout_constraintTop_toTopOf="@+id/paymentPrefencesImageView" />
+
+        <TextView
+            android:id="@+id/loginAndSecurityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Login and security"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/loginAndSecurityImageView"
+            app:layout_constraintStart_toEndOf="@+id/bankAccountAndCreditCardImageView"
+            app:layout_constraintTop_toTopOf="@+id/loginAndSecurityImageView" />
+
+        <TextView
+            android:id="@+id/bankAccountAndCreditCard2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Personal Information"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bankAccountAndCreditCardImageView"
+            app:layout_constraintStart_toEndOf="@+id/bankAccountAndCreditCardImageView"
+            app:layout_constraintTop_toTopOf="@+id/paymentPrefencesImageView" />
+
+        <ImageView
+            android:id="@+id/bankAccountAndCreditCardImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/credit_card" />
+
+        <ImageView
+            android:id="@+id/paymentPrefencesImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bankAccountAndCreditCardImageView"
+            app:srcCompat="@drawable/payment_preferences" />
+
+        <ImageView
+            android:id="@+id/loginAndSecurityImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paymentPrefencesImageView"
+            app:srcCompat="@drawable/login_security" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <TextView
+            android:id="@+id/notificationsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Notifications"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/notificationsImageView"
+            app:layout_constraintStart_toEndOf="@+id/notificationsImageView"
+            app:layout_constraintTop_toTopOf="@+id/notificationsImageView" />
+
+        <ImageView
+            android:id="@+id/notificationsImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notifications" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4">
+
+        <TextView
+            android:id="@+id/helpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Help"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/helpImageView"
+            app:layout_constraintStart_toEndOf="@+id/helpImageView"
+            app:layout_constraintTop_toTopOf="@+id/helpImageView" />
+
+        <TextView
+            android:id="@+id/legalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24dp"
+            android:text="Legal"
+            android:textColor="@color/black2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/legalImageView"
+            app:layout_constraintStart_toEndOf="@+id/legalImageView"
+            app:layout_constraintTop_toTopOf="@+id/legalImageView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/helpImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/help" />
+
+        <ImageView
+            android:id="@+id/legalImageView"
+            android:layout_width="@dimen/width_20dp"
+            android:layout_height="@dimen/height_20dp"
+            android:layout_marginStart="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpImageView"
+            app:srcCompat="@drawable/logout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

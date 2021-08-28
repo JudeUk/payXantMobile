@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/padding_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sendBackButton"
+                android:layout_width="@dimen/width_20dp"
+                android:layout_height="@dimen/height_20dp"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_46dp"
+                android:background="@drawable/back_stroke"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/transactionActivityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_28dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Recent activity"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sendBackButton"
+                app:layout_constraintStart_toEndOf="@+id/sendBackButton"
+                app:layout_constraintTop_toTopOf="@+id/sendBackButton" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="@dimen/width_20dp"
+                android:layout_height="@dimen/height_20dp"
+                android:layout_marginEnd="@dimen/margin_20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/transactionActivityTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/transactionActivityTextView"
+                app:srcCompat="@drawable/transaction" />
+
+            <Button
+                android:id="@+id/viewAllTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:background="@drawable/button_fill_cyanblue"
+                android:fontFamily="@font/poppins_medium"
+                android:text="View all"
+                android:textAllCaps="false"
+                android:textColor="@color/blueberry"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transactionActivityTextView" />
+
+            <Button
+                android:id="@+id/sentTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:background="@drawable/textview_white_black_outline"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sent"
+                android:textAllCaps="false"
+                android:textColor="@color/black2"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/viewAllTextview"
+                app:layout_constraintTop_toBottomOf="@+id/transactionActivityTextView" />
+
+            <Button
+                android:id="@+id/recievedTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:background="@drawable/textview_white_black_outline"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Recieved"
+                android:textAllCaps="false"
+                android:textColor="@color/black2"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/sentTextview"
+                app:layout_constraintTop_toBottomOf="@+id/transactionActivityTextView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sentTextview">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    android:paddingBottom="@dimen/padding_16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/include"
+                            layout="@layout/transaction_activity_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <include
+                            android:id="@+id/include2"
+                            layout="@layout/transaction_activity_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/include"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <include
+                            android:id="@+id/include3"
+                            layout="@layout/transaction_activity_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/include2"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <include
+                            android:id="@+id/include4"
+                            layout="@layout/transaction_activity_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/include3"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <include
+                            android:id="@+id/include5"
+                            layout="@layout/transaction_activity_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/include4"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <include
+                            android:id="@+id/include6"
+                            layout="@layout/transaction_activity_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/include5"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
