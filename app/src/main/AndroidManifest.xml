@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bolu.PayXant">
+    package="com.payx.PayXant">
 
     <application
         android:allowBackup="true"
@@ -9,56 +9,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name="com.bolu.PayXant.MainActivity">
+        <activity android:name="com.payx.PayXant.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.HomeActivity">
+        <activity android:name="com.payx.PayXant.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.ActivityActivity">
+        <activity android:name="com.payx.PayXant.ActivityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.AirtimeActivity">
+        <activity android:name="com.payx.PayXant.AirtimeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.LoansActivity">
+        <activity android:name="com.payx.PayXant.LoansActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.RegisterAccountActivity">
+        <activity android:name="com.payx.PayXant.RegisterAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.SendActivity">
+        <activity android:name="com.payx.PayXant.SendActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bolu.PayXant.SettingsActivity">
+        <activity android:name="com.payx.PayXant.SettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
