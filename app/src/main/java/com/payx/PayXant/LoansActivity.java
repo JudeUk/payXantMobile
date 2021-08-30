@@ -1,4 +1,4 @@
-package com.bolu.PayXant;
+package com.payx.PayXant;
 
 import android.content.Intent;
 import android.os.Bundle;

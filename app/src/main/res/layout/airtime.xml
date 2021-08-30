@@ -227,7 +227,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_16dp"
-                android:layout_marginTop="@dimen/margin_16dp"
                 android:layout_marginEnd="@dimen/margin_16dp"
                 android:height="@dimen/height_60dp"
                 android:background="@drawable/button_outline_blueberry"
@@ -244,32 +243,8 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-            <EditText
-                android:id="@+id/networkProviderEditText"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_16dp"
-                android:layout_marginTop="@dimen/margin_16dp"
-                android:layout_marginEnd="@dimen/margin_16dp"
-                android:height="@dimen/height_60dp"
-                android:background="@drawable/button_outline_blueberry"
-                android:drawableEnd="@drawable/text_name"
-                android:ems="10"
-                android:hint="Network Provider"
-                android:inputType="textPersonName"
-                android:padding="@dimen/padding_16dp"
-                android:textColor="@color/black2"
-                android:textColorHighlight="@color/blueberry"
-                android:textColorHint="@color/black2"
-                android:textColorLink="@color/blueberry"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
 
             <EditText
                 android:id="@+id/selectAmountEditText"
@@ -277,7 +252,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_16dp"
-                android:layout_marginTop="@dimen/margin_16dp"
                 android:layout_marginEnd="@dimen/margin_16dp"
                 android:height="@dimen/height_60dp"
                 android:background="@drawable/button_outline_blueberry"
@@ -293,19 +267,19 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/networkProviderEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <Button
                 android:id="@+id/payButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_16dp"
-                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="@dimen/margin_16dp"
                 android:height="@dimen/height_60dp"
                 android:background="@drawable/button_fill_blueberry"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Pay"
+                android:text="Buy Airtime"
                 android:textAllCaps="false"
                 android:textColor="@color/white2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -335,6 +309,58 @@
                 app:layout_constraintBottom_toBottomOf="@+id/switch1"
                 app:layout_constraintStart_toEndOf="@+id/switch1"
                 app:layout_constraintTop_toTopOf="@+id/switch1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buyAirtimeTextview" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:ms_background_color="@color/ecoLightGrey"
+                    android:background="@drawable/button_outline_blueberry"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

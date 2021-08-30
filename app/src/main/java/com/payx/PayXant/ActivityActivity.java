@@ -1,4 +1,4 @@
-package com.bolu.PayXant;
+package com.payx.PayXant;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,18 +7,18 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SettingsActivity extends AppCompatActivity {
+public class ActivityActivity extends AppCompatActivity {
 
-    TextView settingsBackButton;
+    TextView sendBackButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings);
+        setContentView(R.layout.activity);
 
-        settingsBackButton = findViewById(R.id.settingsBackButton);
+        sendBackButton = findViewById(R.id.sendBackButton);
 
-        settingsBackButton.setOnClickListener(new View.OnClickListener() {
+        sendBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendBackButtonActivity();

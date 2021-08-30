@@ -1,4 +1,4 @@
-package com.bolu.PayXant;
+package com.payx.PayXant;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.home_screen);
 
         sendView = findViewById(R.id.sendView);
 //        withdrawView = findViewById(R.id.withdrawView);

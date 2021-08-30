@@ -1,4 +1,4 @@
-package com.bolu.PayXant;
+package com.payx.PayXant;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,14 +7,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SendActivity extends AppCompatActivity {
+public class AirtimeActivity extends AppCompatActivity {
 
     TextView sendBackButton;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.send);
+        setContentView(R.layout.airtime);
 
         sendBackButton = findViewById(R.id.sendBackButton);
 

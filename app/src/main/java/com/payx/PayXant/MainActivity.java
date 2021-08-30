@@ -1,13 +1,13 @@
-package com.bolu.PayXant;
+package com.payx.PayXant;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class RegisterAccountActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     Button loginButton;
     Button signUpButton;
@@ -15,33 +15,33 @@ public class RegisterAccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register_account);
+        setContentView(R.layout.login);
 
         loginButton = findViewById(R.id.loginButton);
         signUpButton = findViewById(R.id.signUpButton);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loginButtonActivity();
-            }
-        });
-
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signUpButtonActivity();
+                signUpActivity();
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNewActivity();
             }
         });
     }
 
-    private void loginButtonActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    private void signUpButtonActivity() {
+    private void openNewActivity() {
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
+
+    private void signUpActivity() {
+        Intent intent = new Intent(this, RegisterAccountActivity.class);
+        startActivity(intent);
     }
+}
